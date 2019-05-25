@@ -145,9 +145,17 @@ Lastly, if you want to use newer ECMAscript features, or language addons like Ty
 use the `compiler` flag.  For example, to use babel with your migrations, you can do the following:
 
 ```
-$ npm install --save babel-register
+$ npm install -D babel-register
 $ migrate create --compiler="js:babel-register" foo
 $ migrate up --compiler="js:babel-register"
+```
+
+or for Babel 7:
+
+```
+$ npm install -D @babel/register
+$ migrate create --compiler="js:@babel/register" foo
+$ migrate up --compiler="js:@babel/register"
 ```
 
 ## Running Migrations
